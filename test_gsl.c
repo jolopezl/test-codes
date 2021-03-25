@@ -22,6 +22,7 @@
 
 int main(void)
 {
+  printf("Start...");
   const gsl_rng_type* T;
   gsl_rng* r;
 
