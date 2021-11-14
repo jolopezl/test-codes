@@ -2,6 +2,7 @@
 #include <iostream>
 #include <boost/process/child.hpp>
 #include <boost/process/spawn.hpp>
+#include <thread>
 
 int main()
 {
@@ -16,5 +17,12 @@ int main()
     c.detach();
     c.terminate();
     */
+
+    int i = 0;
+
+    while(true) {
+        ++i;
+    }
+
     return 1;
 }

@@ -8,7 +8,8 @@ std::string check = "ABCDEFGHIJKLMNIOPRSTUVWXYZ";
 
 int f1()
 {
-    if (input == check)
+    std::string& x = input;
+    if (x == check)
         return -1;
     else
         return 0;
@@ -32,15 +33,15 @@ int main()
             fun();
 
         const std::chrono::duration<double> diff = std::chrono::high_resolution_clock::now() - start;
-        //std::cout << "Time: " << std::fixed << std::setprecision(6) << diff.count()
-        //          << " sec " << rem << std::endl;
+        std::cout << "Time: " << std::fixed << std::setprecision(6) << diff.count()
+                  << " sec " << rem << std::endl;
         return diff.count();
     };
 
-    for (int i = 0; i < 1e5; ++i) {
-        auto t1 = benchmark(f1, "without optimizations");
-        auto t2 = benchmark(f2, "with optimizations");
-        std::cout << t1 << "," << t2 << std::endl;
-    }
+    // for (int i = 0; i < 1e5; ++i) {
+    auto t1 = benchmark(f1, "without optimizations");
+    auto t2 = benchmark(f2, "with optimizations");
+    // std::cout << t1 << "," << t2 << std::endl;
+    // }
     return 0;
 }
