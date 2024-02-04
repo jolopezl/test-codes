@@ -1,3 +1,7 @@
+/*
+    using: Tcl_StringCaseMatch from tcl/generic/tclUtil.c
+*/
+
 #include <tcl.h> // Include the Tcl header
 #include <iostream>
 
