@@ -1,4 +1,5 @@
 /*
+    provide same string match as in https://wiki.tcl-lang.org/page/string+match
     using: Tcl_StringCaseMatch from tcl/generic/tclUtil.c
 */
 
